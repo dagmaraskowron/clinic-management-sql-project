@@ -1,6 +1,6 @@
 # Clinic Management SQL Project
 
-This project presents a relational database system for managing a medical clinic. It includes patients, doctors, appointments, prescriptions, payments, referrals, specializations, and medical records.
+This project presents a relational database system for managing a medical clinic.
 
 ## Technologies
 
