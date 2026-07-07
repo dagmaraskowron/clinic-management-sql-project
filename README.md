@@ -25,6 +25,4 @@ This project presents a relational database system for managing a medical clinic
 - `clinic-management-sql-project.sql` — SQL script containing the database structure and queries
 - `ERD_schema.png` — database schema diagram
 
-## What I Learned
 
-Through this project, I strengthened my understanding of relational database design, SQL queries, PostgreSQL, and building a simple database-driven application.
