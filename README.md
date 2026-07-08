@@ -7,8 +7,7 @@ Przedstawia on prostą relacyjną bazę danych dla przychodni medycznej.
 
 - PostgreSQL
 - SQL
-- R
-- Shiny
+- R-Shiny
 
 ## Zawartośc
 - projekt relacyjnej bazy danych dla przychodni,
