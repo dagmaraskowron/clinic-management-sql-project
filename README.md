@@ -1,28 +1,28 @@
 # Clinic Management SQL Project
 
-This project presents a relational database system for managing a medical clinic.
+Ten projekt przedstawia prostą relacyjną bazę danych dla przychodni medycznej.
 
-## Technologies
+## Technologie
 
 - PostgreSQL
 - SQL
 - R
 - Shiny
 
-## Features
+## Zawartośc
+- projekt relacyjnej bazy danych dla przychodni,
+- tabele dla pacjentów, lekarzy, wizyt, recept, płatności, skierowań i specjalizacji,
+- zapytania SQL z użyciem `JOIN`, filtrowania i agregacji,
+- prosty interfejs w R Shiny do dodawania, przeglądania i zarządzania rekordami,
+- diagram przedstawiający strukturę bazy danych.
 
-- Relational database design for a medical clinic
-- Tables for patients, doctors, appointments, prescriptions, payments, referrals, and specializations
-- SQL queries using JOINs, filtering, and aggregation
-- R Shiny interface for adding, viewing, and managing records
+## Schemat bazy danych
 
-## Database Schema
+![Schemat bazy danych](ERD_schema.png)
 
-![Database schema](ERD_schema.png)
+## Pliki w projekcie
 
-## Project Files
-
-- `clinic-management-sql-project.sql` — SQL script containing the database structure and queries
-- `ERD_schema.png` — database schema diagram
+- `clinic-management-sql-project.sql` — skrypt SQL z bazą danych i zapytaniami,
+- `ERD_schema.png` — diagram przedstawiający strukturę bazy danych.
 
 
