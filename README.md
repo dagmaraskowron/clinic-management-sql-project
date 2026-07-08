@@ -14,7 +14,7 @@ Przedstawia on prostą relacyjną bazę danych dla przychodni medycznej.
 - projekt relacyjnej bazy danych dla przychodni,
 - tabele dla pacjentów, lekarzy, wizyt, recept, płatności, skierowań i specjalizacji,
 - zapytania SQL z użyciem `JOIN`, filtrowania i agregacji,
-- prosty interfejs w R Shiny do dodawania, przeglądania i zarządzania rekordami,
+- prosty interfejs w R Shiny do dodawania, przeglądania i zarządzania wizytami,
 - diagram przedstawiający strukturę bazy danych.
 
 ## Schemat bazy danych
