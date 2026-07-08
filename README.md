@@ -1,6 +1,7 @@
 # Clinic Management SQL Project
 
-Ten projekt przedstawia prostą relacyjną bazę danych dla przychodni medycznej.
+Jest to projekt końcowy zrealizowany w ramach przedmiotu Bazy danych na studiach.
+Przedstawia on prostą relacyjną bazę danych dla przychodni medycznej.
 
 ## Technologie
 
