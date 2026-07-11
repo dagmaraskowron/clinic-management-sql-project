@@ -3,26 +3,162 @@
 Jest to projekt końcowy zrealizowany w ramach przedmiotu Bazy danych na studiach.
 Przedstawia on prostą relacyjną bazę danych dla przychodni medycznej.
 
-## Technologie
+Baza umożliwia przechowywanie i obsługę informacji dotyczących:
 
-- PostgreSQL
-- SQL
-- R-Shiny
+- pacjentów,
+- lekarzy i ich specjalizacji,
+- gabinetów,
+- terminarza pracy lekarzy,
+- wizyt,
+- recept i leków,
+- skierowań,
+- płatności,
+- historii leczenia pacjenta.
 
-## Zawartośc
-- projekt relacyjnej bazy danych dla przychodni,
-- tabele dla pacjentów, lekarzy, wizyt, recept, płatności, skierowań i specjalizacji,
-- zapytania SQL z użyciem `JOIN`, filtrowania i agregacji,
-- prosty interfejs w R Shiny do dodawania, przeglądania i zarządzania wizytami,
-- diagram przedstawiający strukturę bazy danych.
+Do bazy został przygotowany również prosty interfejs aplikacji, który pozwala przeglądać dane w bardziej czytelnej formie.
+
+## Najważniejsze elementy bazy danych
+
+Projekt zawiera tabele odpowiedzialne m.in. za:
+
+- dane pacjentów i lekarzy,
+- specjalizacje lekarzy,
+- dostępność lekarzy w poszczególnych gabinetach,
+- rezerwowanie i anulowanie wizyt,
+- wystawianie recept,
+- przypisywanie leków do recept,
+- zapisywanie płatności za wizyty,
+- przechowywanie skierowań.
+
+W bazie zastosowano klucze główne i obce, które łączą dane z różnych tabel.
 
 ## Schemat bazy danych
 
 ![Schemat bazy danych](ERD_schema.png)
 
-## Pliki w projekcie
+## Relacje między tabelami
 
-- `clinic-management-sql-project.sql` — skrypt SQL z bazą danych i zapytaniami,
-- `ERD_schema.png` — diagram przedstawiający strukturę bazy danych.
+W projekcie występują m.in. następujące relacje:
+
+- pacjent może mieć wiele wizyt,
+- lekarz może prowadzić wiele wizyt,
+- lekarz może mieć więcej niż jedną specjalizację,
+- specjalizacja może być przypisana do wielu lekarzy,
+- wizyta może posiadać receptę, skierowanie i płatność,
+- recepta może zawierać wiele leków,
+- jeden lek może występować na wielu receptach.
+
+Relacje wiele-do-wielu zostały zrealizowane za pomocą tabel:
+
+- `lekarz_specjalizacja`,
+- `recepta_lek`.
+
+## Widoki
+
+Dla łatwiejszego pobierania danych utworzyłam widoki SQL:
+
+- `kalendarz_wizyt` – lista wizyt wraz z pacjentem i lekarzem,
+- `szczegoly_platnosci` – informacje o płatnościach i ich statusach,
+- `zawartosc_recepty` – lista leków znajdujących się na receptach,
+- `terminarz_info` – godziny pracy lekarzy i przypisane gabinety,
+- `historia_pacjenta` – historia wizyt wybranego pacjenta,
+- `specjalizacje_lekarzy` – lekarze wraz z przypisanymi specjalizacjami.
+
+Widoki upraszczają zapytania wykorzystywane przez aplikację.
+
+## Funkcje i triggery
+
+W projekcie zastosowałam funkcje i triggery, które automatycznie kontrolują poprawność danych.
+
+### Sprawdzanie terminarza lekarza
+
+Przed dodaniem wizyty baza sprawdza, czy lekarz przyjmuje w wybranym dniu, o podanej godzinie i w danym gabinecie.
+
+Jeżeli termin nie pasuje do terminarza lekarza, wizyta nie zostanie dodana.
+
+### Blokowanie podwójnej rezerwacji
+
+Baza sprawdza, czy lekarz nie ma już innej wizyty w tym samym dniu i o tej samej godzinie.
+
+Dzięki temu nie można przypadkowo zapisać dwóch pacjentów na ten sam termin.
+
+### Automatyczne ustawianie daty płatności
+
+Jeżeli status płatności zostanie zmieniony na `oplacona`, data płatności jest automatycznie ustawiana na aktualny dzień.
+
+## Kontrola poprawności danych
+
+W bazie zastosowano m.in.:
+
+- `PRIMARY KEY`,
+- `FOREIGN KEY`,
+- `UNIQUE`,
+- `NOT NULL`,
+- ograniczenia `CHECK`,
+- `ON DELETE CASCADE`,
+- `ON DELETE RESTRICT`.
+
+Przykładowo:
+
+- PESEL pacjenta musi być unikalny,
+- numer PWZ lekarza musi być unikalny,
+- kwota płatności musi być większa od zera,
+- godzina rozpoczęcia pracy lekarza musi być wcześniejsza niż godzina zakończenia,
+- status wizyty może mieć tylko jedną z określonych wartości.
+
+## Podgląd aplikacji
+
+Interfejs aplikacji umożliwiał przeglądanie:
+
+- kalendarza wizyt,
+- płatności,
+- recept,
+- terminarza lekarzy,
+- historii pacjentów.
+
+### Kalendarz wizyt
+
+![Kalendarz wizyt](images/kalendarz_wizyt.png)
+
+### Płatności
+
+![Płatności](images/platnosci.png)
+
+### Terminarz lekarzy
+
+![Terminarz lekarzy](images/terminarz_lekarzy.png)
+
+### Historia pacjenta
+
+![Historia pacjenta](images/historia_pacjenta.png)
+
+## Użyte technologie
+
+W projekcie wykorzystałam:
+
+- PostgreSQL,
+- SQL,
+- widoki,
+- funkcje i triggery,
+- klucze obce i ograniczenia integralności,
+- R Shiny do przygotowania prostego interfejsu aplikacji.
+
+## Przykładowe możliwości systemu
+
+System pozwala m.in. na:
+
+- dodanie pacjenta i lekarza,
+- przypisanie specjalizacji do lekarza,
+- przygotowanie terminarza pracy,
+- dodanie wizyty,
+- sprawdzenie dostępności lekarza,
+- zablokowanie podwójnej rezerwacji,
+- wystawienie recepty,
+- dodanie leku do recepty,
+- zapisanie płatności,
+- wyświetlenie historii wizyt pacjenta.
+
+
+
 
 
