@@ -116,21 +116,18 @@ Interfejs aplikacji umożliwiał przeglądanie:
 - terminarza lekarzy,
 - historii pacjentów.
 
+
 ### Kalendarz wizyt
 
-![Kalendarz wizyt](images/kalendarz_wizyt.png)
+![Kalendarz wizyt](kalendarz_wizyt.png)
 
 ### Płatności
 
-![Płatności](images/platnosci.png)
+![Płatności](platnosci.png)
 
 ### Terminarz lekarzy
 
-![Terminarz lekarzy](images/terminarz_lekarzy.png)
-
-### Historia pacjenta
-
-![Historia pacjenta](images/historia_pacjenta.png)
+![Terminarz lekarzy](terminarz_lekarzy.png)
 
 ## Użyte technologie
 
