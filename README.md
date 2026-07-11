@@ -122,7 +122,6 @@ Interfejs aplikacji umożliwiał przeglądanie:
 W projekcie wykorzystałam:
 
 - PostgreSQL,
-- SQL,
 - widoki,
 - funkcje i triggery,
 - klucze obce i ograniczenia integralności,
