@@ -109,9 +109,6 @@ Interfejs aplikacji umożliwiał przeglądanie:
 - historii pacjentów.
 
 
-### Kalendarz wizyt
-
-![Kalendarz wizyt](kalendarz_wizyt.png)
 
 ### Płatności
 
