@@ -125,10 +125,6 @@ Interfejs aplikacji umożliwiał przeglądanie:
 
 ![Płatności](platnosci.png)
 
-### Terminarz lekarzy
-
-![Terminarz lekarzy](terminarz_lekarzy.png)
-
 ## Użyte technologie
 
 W projekcie wykorzystałam:
@@ -139,21 +135,6 @@ W projekcie wykorzystałam:
 - funkcje i triggery,
 - klucze obce i ograniczenia integralności,
 - R Shiny do przygotowania prostego interfejsu aplikacji.
-
-## Przykładowe możliwości systemu
-
-System pozwala m.in. na:
-
-- dodanie pacjenta i lekarza,
-- przypisanie specjalizacji do lekarza,
-- przygotowanie terminarza pracy,
-- dodanie wizyty,
-- sprawdzenie dostępności lekarza,
-- zablokowanie podwójnej rezerwacji,
-- wystawienie recepty,
-- dodanie leku do recepty,
-- zapisanie płatności,
-- wyświetlenie historii wizyt pacjenta.
 
 
 
