@@ -98,14 +98,6 @@ W bazie zastosowano m.in.:
 - `ON DELETE CASCADE`,
 - `ON DELETE RESTRICT`.
 
-Przykładowo:
-
-- PESEL pacjenta musi być unikalny,
-- numer PWZ lekarza musi być unikalny,
-- kwota płatności musi być większa od zera,
-- godzina rozpoczęcia pracy lekarza musi być wcześniejsza niż godzina zakończenia,
-- status wizyty może mieć tylko jedną z określonych wartości.
-
 ## Podgląd aplikacji
 
 Interfejs aplikacji umożliwiał przeglądanie:
